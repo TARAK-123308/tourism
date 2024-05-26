@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Team Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container-custom {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .nav-buttons, .action-buttons, .info-box {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .nav-buttons button, .action-buttons button {
+            flex: 1;
+            margin: 0 10px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .action-buttons {
+            justify-content: space-evenly;
+        }
+        .separator {
+            border-bottom: 2px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .total-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .total-info span {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .info-box div {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Container for Navbar -->
+    <div class="container col-md-6 offset-md-3">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Tourism Project</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products/product.html">
+                            <i class="fas fa-shopping-bag"></i> Products
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="myacc.html">
+                            <i class="fas fa-user"></i> My Acc
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content Box -->
+        <div class="container-custom">
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="navigateTo('page1')">B-10%(0)</button>
+                <button onclick="navigateTo('page2')">C-5%(0)</button>
+                <button onclick="navigateTo('page3')">D-2%(0)</button>
+            </div>
+
+            <!-- Total Info -->
+            <div class="total-info">
+                <span>Total:</span>
+                <span id="total-number">0</span>
+            </div>
+
+            <!-- Separator Line -->
+            <div class="separator"></div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button onclick="navigateTo('invalid-member')">Invalid Member</button>
+                <button onclick="navigateTo('valid-member')">Valid Member</button>
+            </div>
+
+            <!-- Information Box -->
+            <div class="info-box">
+                <div>
+                    <h5>Account</h5>
+                    <div id="account-data">Fetching data...</div>
+                </div>
+                <div>
+                    <h5>Level</h5>
+                    <div id="level-data">Fetching data...</div>
+                </div>
+                <div>
+                    <h5>Product</h5>
+                    <div id="product-data">Fetching data...</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <footer class="py-4 bg-dark text-white-50">
+            <div class="container text-center">
+              <small>&copy; 2024 Tourism Project. All Rights Reserved.</small>
+            </div>
+          </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Simulate fetching data from a database
+            const totalNumber = 42;
+            const accountNumber = 12345678;
+            const levelData = "Gold";
+            const productData = "Product A";
+
+            // Updating the page with fetched data
+            document.getElementById('total-number').innerText = totalNumber;
+            document.getElementById('account-data').innerText = accountNumber;
+            document.getElementById('level-data').innerText = levelData;
+            document.getElementById('product-data').innerText = productData;
+        });
+
+        function navigateTo(page) {
+            // Simulate navigation
+            alert('Navigating to ' + page);
+        }
+    </script>
+</body>
+</html>

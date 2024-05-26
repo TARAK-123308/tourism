@@ -1,0 +1,11 @@
+.bonus-box {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(244, 64, 10, 0.63);
+}
+.bonus-title{
+    font-size: 30px;
+    text-align: center;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="../styles.css"> <!-- Add your CSS file -->
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add your CSS styles here */
+        .view-project-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .view-project-button:hover {
+            background-color: darkgreen;
+        }
+
+        .nav-link {
+            color: white !important; /* Ensure link text is white */
+        }
+
+        .nav-link:hover {
+            color: lightgray !important; /* Change link color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 offset-3">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                    <div class="container">
+                      <a class="navbar-brand" href="#">Tourism Project</a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html" >Home</a>
+                              </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="unexpired.html" target="productFrame">Unexpired Products</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="expired.html" target="productFrame">Expired Products</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </nav> 
+                <!-- Default to Unexpired Products -->
+                <iframe id="productFrame" name="productFrame" src="unexpired.html" style="width: 100%; height: 600px; border: none;"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Link Bootstrap JS, jQuery, and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
